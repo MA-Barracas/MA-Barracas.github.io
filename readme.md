@@ -73,7 +73,7 @@ Antes de comenzar, asegúrate de tener lo siguiente instalado en tu entorno de d
 
 Si tienes alguna pregunta sobre el curso o el material, puedes contactar conmigo a través de:
 
-- **Correo electrónico**: [tuemail@example.com](mailto:jose.lgo.datascience@gmail.com)
+- **Correo electrónico**: [jose.lgo.datascience@gmail.com](mailto:jose.lgo.datascience@gmail.com)
 - **GitHub**: [MA-Barracas](https://github.com/MA-Barracas)
 
 ---
