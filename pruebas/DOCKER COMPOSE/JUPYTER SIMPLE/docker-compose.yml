@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  jupyter:
+    image: jupyter/scipy-notebook:latest
+    container_name: jupyter_container
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+    environment:
+      JUPYTER_TOKEN: "my_secret_token"
+    restart: unless-stopped
