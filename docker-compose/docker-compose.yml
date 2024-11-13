@@ -1,0 +1,38 @@
+version: '3.5'
+
+services:
+  postgres:
+    image: postgres:alpine
+    
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    
+    networks:
+      - data_net
+    
+    environment:
+      - POSTGRES_USER=usuario
+      - POSTGRES_PASSWORD=contraseña
+      - POSTGRES_DB=basededatos
+
+    
+  jupyter:
+    image: jupyter/minimal-notebook:latest
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/home/jovyan/work
+    environment:
+      - JUPYTER_TOKEN=""
+      - JUPYTER_ENABLE_LAB="yes"
+    networks:
+      - data_net
+
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:
+
+networks:
+  data_net:
